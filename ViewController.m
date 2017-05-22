@@ -19,7 +19,6 @@
 
 @implementation ViewController
 
-NSArray *allNames;
 NSArray *firstLetters;
 NSDictionary *names;
 
@@ -38,7 +37,6 @@ NSDictionary *names;
               @"O" : @[@"Olina Zhu", @"Olivia Sison", @"Omercan Erol"],
               @"S" : @[@"Sabrina Evoy", @"Sabrina Tiong", @"Sarah Smith", @"Serena Yuan", @"Sophie Kim", @"Stephanie Smittkamp"],
               @"Y" : @[@"Yumi Tittiger"]};
-    allNames = [NSArray arrayWithObjects:@"Alexandra Rugg", @"Alexis deMontford-Shepherd", @"Carla Ramazan", @"Catherine Line", @"Elena Albregts", @"Eric Baggins", @"Lauren Klein", @"Olina Zhu", @"Olivia Sison", @"Omercan Erol", @"Sabrina Evoy", nil];
     firstLetters = [[names allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, width, height) style:UITableViewStylePlain];
